@@ -22,61 +22,7 @@ class ReviewSystem {
       this.populateLocationSelect();
       this.renderReviews();
     }
-const modal = document.getElementById("donateModal");
-        const donateLink = document.getElementById("donateLink");
-        const closeBtn = document.querySelector(".close-modal");
-        const copySuccess = document.getElementById("copySuccess");
 
-        // Open modal when donate link is clicked
-        donateLink.addEventListener("click", function(e) {
-            e.preventDefault();
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden"; // Prevent scrolling
-        });
-
-        // Close modal when X is clicked
-        closeBtn.addEventListener("click", function() {
-            closeModal();
-        });
-
-        // Close modal when clicking outside the modal
-        window.addEventListener("click", function(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Close modal with ESC key
-        document.addEventListener("keydown", function(e) {
-            if (e.key === "Escape" && modal.style.display === "block") {
-                closeModal();
-            }
-        });
-
-        function closeModal() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto"; // Re-enable scrolling
-            copySuccess.style.display = "none"; // Reset copy message
-        }
-
-        // Copy ETH address functionality
-        function copyAddress() {
-            const ethAddress = document.getElementById("ethAddress");
-            const textArea = document.createElement("textarea");
-            textArea.value = ethAddress.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textArea);
-            
-            // Show success message
-            copySuccess.style.display = "block";
-            
-            // Hide message after 2 seconds
-            setTimeout(function() {
-                copySuccess.style.display = "none";
-            }, 2000);
-        }
     async loadLocations() {
       try {
         const response = await fetch('./data/locations.json');
