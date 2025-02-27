@@ -1,0 +1,94 @@
+[
+    {
+      "id": "hunza-valley",
+      "name": "Hunza Valley",
+      "lat": 36.3167,
+      "lng": 74.6500,
+      "region": "Gilgit-Baltistan",
+      "category": "mountains",
+      "shortDescription": "A mountainous valley known for its scenic beauty and cultural heritage.",
+      "description": "Hunza Valley is a mountainous valley in the Gilgit-Baltistan region of Pakistan. The valley provides a spectacular view of Rakaposhi, Ultar Sar, and Bojahagur Duanasir II. The region is surrounded by several high peaks including Rakaposhi, Ultar, Bojahagur, Diran, etc. Hunza is also home to ancient monuments, including the UNESCO World Heritage-listed Baltit Fort.",
+      "images": [
+        "./images/destinations/hunza/hunza-valley-1.jpg",
+        "./images/destinations/hunza/hunza-valley-2.jpg",
+        "./images/destinations/hunza/baltit-fort.jpg",
+        "./images/destinations/hunza/attabad-lake.jpg"
+      ],
+      "thumbnail": "./images/destinations/hunza/thumbnail.jpg",
+      "travelTips": [
+        "Best time to visit: April to October",
+        "Accommodation: Hotels and guesthouses are available in Karimabad",
+        "Transportation: Accessible by road from Gilgit (2-3 hours)",
+        "Don't miss: Baltit Fort, Attabad Lake, and Eagle's Nest viewpoint"
+      ]
+    },
+    {
+      "id": "skardu",
+      "name": "Skardu",
+      "lat": 35.2955,
+      "lng": 75.6295,
+      "region": "Gilgit-Baltistan",
+      "category": "mountains",
+      "shortDescription": "Gateway to the mighty Karakoram Range and home to stunning landscapes.",
+      "description": "Skardu is a city located in Gilgit-Baltistan region of Pakistan, serving as the gateway to the mighty Karakoram Range. The city is situated at the confluence of the Indus and Shigar rivers at an elevation of nearly 2,500 meters. The region is known for its stunning high-altitude lakes, vast deserts, plateaus and mountains, including K2, the world's second highest peak.",
+      "images": [
+        "./images/destinations/skardu/shangrila-resort.jpg",
+        "./images/destinations/skardu/upper-kachura-lake.jpg",
+        "./images/destinations/skardu/deosai-plains.jpg",
+        "./images/destinations/skardu/sarfaranga-cold-desert.jpg"
+      ],
+      "thumbnail": "./images/destinations/skardu/thumbnail.jpg",
+      "travelTips": [
+        "Best time to visit: May to October",
+        "Accommodation: Several hotels and resorts, including Shangrila Resort",
+        "Transportation: Accessible by air from Islamabad or by road from Gilgit",
+        "Don't miss: Upper Kachura Lake, Deosai National Park, and Sarfaranga Cold Desert"
+      ]
+    },
+    {
+      "id": "murree",
+      "name": "Murree",
+      "lat": 33.9085,
+      "lng": 73.3945,
+      "region": "Punjab",
+      "category": "hill-stations",
+      "shortDescription": "A popular hill station and summer resort town in the Galyat region.",
+      "description": "Murree is a popular hill station and summer resort town located in the Galyat region of Punjab, Pakistan. It is situated along the Islamabad-Murree Highway, about 30 km northeast of Islamabad. The city sits at an elevation of 2,291 meters (7,516 ft) and serves as a popular tourist destination due to its pleasant weather, scenic beauty, and accessibility from the capital.",
+      "images": [
+        "./images/destinations/murree/mall-road.jpg",
+        "./images/destinations/murree/pindi-point.jpg",
+        "./images/destinations/murree/patriata-chair-lift.jpg",
+        "./images/destinations/murree/murree-hills.jpg"
+      ],
+      "thumbnail": "./images/destinations/murree/thumbnail.jpg",
+      "travelTips": [
+        "Best time to visit: All year round; summer (March-August) for pleasant weather, winter (December-February) for snow",
+        "Accommodation: Numerous hotels and guesthouses available in all price ranges",
+        "Transportation: Easily accessible by road from Islamabad (about 1-2 hours)",
+        "Don't miss: Mall Road, Pindi Point, Kashmir Point, and Patriata (New Murree)"
+      ]
+    },
+    {
+      "id": "lahore-fort",
+      "name": "Lahore Fort",
+      "lat": 31.5880,
+      "lng": 74.3156,
+      "region": "Punjab",
+      "category": "historical",
+      "shortDescription": "A historic citadel located in the city of Lahore, a UNESCO World Heritage Site.",
+      "description": "The Lahore Fort (Shahi Qila) is a citadel in the city of Lahore, Punjab, Pakistan. It is located in the northwestern corner of the Walled City of Lahore. The trapezoidal composition is spread over 20 hectares. The fort contains 21 notable monuments, some of which date to the era of Emperor Akbar. The Lahore Fort is notable for having been almost entirely rebuilt in the 17th century, when the Mughal Empire was at the height of its splendor and opulence.",
+      "images": [
+        "./images/destinations/lahore/sheesh-mahal.jpg",
+        "./images/destinations/lahore/alamgiri-gate.jpg",
+        "./images/destinations/lahore/naulakha-pavilion.jpg",
+        "./images/destinations/lahore/diwan-e-khas.jpg"
+      ],
+      "thumbnail": "./images/destinations/lahore/lahore-fort-thumbnail.jpg",
+      "travelTips": [
+        "Best time to visit: October to March",
+        "Entry fee: PKR 500 for foreigners, PKR 20 for locals",
+        "Visiting hours: 8:30 AM to 5:30 PM (closed on Mondays)",
+        "Don't miss: Sheesh Mahal (Palace of Mirrors), Alamgiri Gate, and Naulakha Pavilion"
+      ]
+    }
+  ]
