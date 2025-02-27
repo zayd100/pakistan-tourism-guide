@@ -41,6 +41,52 @@
   .btn:hover {
     background: #1b5e20;
   }
+#donate {
+    display: none;
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 500px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When it's active, fade in and move up */
+#donate.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Donate Section Header */
+#donate h2 {
+    color: #00ffcc;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Donate Text */
+#donate p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* ETH Address Styling */
+.eth-address {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    display: inline-block;
+    word-break: break-word;
+    color: #00ffcc;
+    font-weight: bold;
+}
   
   /* Header */
   header {
