@@ -22,7 +22,11 @@ class ReviewSystem {
       this.populateLocationSelect();
       this.renderReviews();
     }
-    
+            function copyAddress() {
+            var address = document.getElementById("ethAddress").textContent;
+            navigator.clipboard.writeText(address);
+            alert("ETH Address copied!");
+        }
     async loadLocations() {
       try {
         const response = await fetch('./data/locations.json');
