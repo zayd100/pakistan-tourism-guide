@@ -126,7 +126,7 @@
 <div id="donateModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h2 class="donate-title">Support Pakistan Tourism</h2>
+        <h2 class="donate-title">Support Pakistan Tourism via Ethereum</h2>
         <p class="donate-text">Your contribution helps us showcase the beauty of Pakistan to the world. Thank you for your support!</p>
         <div class="eth-address-container" id="ethAddress">0x120648d29d4447FbA14D5360de2ba3095fF7B72c</div>
         <button class="copy-btn" id="copyButton">
@@ -236,40 +236,38 @@
 }
 </style>
 
-<!-- Add this JavaScript right before the closing </body> tag -->
+
 <script>
-// Wait for the DOM to be fully loaded
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Get modal elements
+
     const modal = document.getElementById('donateModal');
     const closeBtn = document.querySelector('.close-modal');
     const copySuccess = document.getElementById('copySuccess');
     const copyButton = document.getElementById('copyButton');
-    
-    // Change the donate link in the navigation to open the modal
+
     const donateLinks = document.querySelectorAll('a[href="#donate"]');
     donateLinks.forEach(link => {
         link.setAttribute('href', '#');
         link.addEventListener('click', function(e) {
             e.preventDefault();
             modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden'; 
         });
     });
     
-    // Close modal when X is clicked
+
     closeBtn.addEventListener('click', function() {
         closeModal();
     });
     
-    // Close modal when clicking outside the modal
+  
     window.addEventListener('click', function(e) {
         if (e.target === modal) {
             closeModal();
         }
     });
-    
-    // Close modal with ESC key
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === 'block') {
             closeModal();
@@ -283,10 +281,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Use the modern clipboard API
         navigator.clipboard.writeText(text).then(function() {
-            // Show success message
+         
             copySuccess.style.display = 'block';
             
-            // Hide message after 2 seconds
+            // Hide mssg after 2 sec
             setTimeout(function() {
                 copySuccess.style.display = 'none';
             }, 2000);
@@ -297,11 +295,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function closeModal() {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
-        copySuccess.style.display = 'none'; // Reset copy message
+        document.body.style.overflow = 'auto'; 
+        copySuccess.style.display = 'none'; 
     }
     
-    // Remove the original donate section if it exists
+    
     const donateSection = document.getElementById('donate');
     if (donateSection) {
         donateSection.style.display = 'none';
