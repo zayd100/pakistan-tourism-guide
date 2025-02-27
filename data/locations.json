@@ -114,5 +114,29 @@
         "Must Try: Chapli Kabab, Trout Fish, Dum Pukht, and local dry fruits."
       ]
         
+    },
+    {
+        "id": "deosai-national-park",
+        "name":"Deosai National Park",
+        "lat":34.58,
+        "lng":75.24,
+        "region": "Gilgit Baltistan",
+        "category":"Natural Wonder",
+        "shortDescription": "an alpine plateau of exceptional beauty and ecological value located in the western massif of the Himalayas, east of Nanga Parbat Peak and in close proximity to the Central Karakoram Range",
+        "description": "Deosai is a high-altitude alpine plain situated at an average elevation of 4,114 m above sea level. In Balti language, it is called “Ghbiarsa” meaning “summer’s Place” as it is only accessible in the summers. Deosai Plains are considered as the second highest plateau in the world. The Deosai plateau experiences extreme cold, low atmospheric pressure, low oxygen and carbon dioxide levels, aridity, and intense UV radiation. Due to its location facing the monsoon-affected outer Himalayas, it receives more rainfall than the nearby valleys of Baltistan, with annual precipitation ranging from 350 to 550 mm, mostly as winter snow.",
+
+              "images": [
+        "./images/destinations/lahore/sheesh-mahal.jpg",
+        "./images/destinations/lahore/alamgiri-gate.jpg",
+        "./images/destinations/lahore/naulakha-pavilion.jpg",
+        "./images/destinations/lahore/diwan-e-khas.jpg"
+      ],
+      "thumbnail": "./images/destinations/lahore/lahore-fort-thumbnail.jpg",
+      "travelTips": [
+        " There is little to no mobile network coverage in Deosai, so inform someone about your travel plans before you go.",
+        "Do not litter, avoid disturbing wildlife, and respect the pristine environment of this beautiful national park.",
+        "Deosai is at a high altitude (over 4,000m), so move slowly and stay hydrated to avoid altitude sickness.",
+        "Pack warm clothes, even in summer, as temperatures drop drastically at night. A rain jacket and sturdy hiking shoes are also recommended."
+      ]
     }
   ]
