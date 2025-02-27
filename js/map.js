@@ -1,18 +1,17 @@
-// Initialize the map centered on Pakistan
+
 const map = L.map('pakistan-map').setView([30.3753, 69.3451], 6);
 
-// Add OpenStreetMap tiles
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Load tourism locations from JSON
+
 async function loadLocations() {
   try {
     const response = await fetch('./data/locations.json');
     const locations = await response.json();
-    
-    // Add markers for each location
+  
     locations.forEach(location => {
       const marker = L.marker([location.lat, location.lng])
         .addTo(map)
@@ -25,13 +24,12 @@ async function loadLocations() {
           </div>
         `);
         
-      // Handle marker click
       marker.on('click', function() {
         highlightLocation(location.id);
       });
     });
     
-    // Add event listeners to view details buttons
+    // Add event listeners
     document.querySelectorAll('.view-details').forEach(button => {
       button.addEventListener('click', (e) => {
         const locationId = e.target.getAttribute('data-id');
@@ -45,14 +43,13 @@ async function loadLocations() {
   }
 }
 
-// Highlight selected location in sidebar
+
 function highlightLocation(locationId) {
-  // Remove previous highlights
+  // Remove prev
   document.querySelectorAll('.location-card').forEach(card => {
     card.classList.remove('active');
   });
-  
-  // Add highlight to selected location
+
   const selectedCard = document.querySelector(`.location-card[data-id="${locationId}"]`);
   if (selectedCard) {
     selectedCard.classList.add('active');
@@ -60,5 +57,4 @@ function highlightLocation(locationId) {
   }
 }
 
-// Initialize map when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadLocations);
