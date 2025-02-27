@@ -90,5 +90,29 @@
         "Visiting hours: 8:30 AM to 5:30 PM (closed on Mondays)",
         "Don't miss: Sheesh Mahal (Palace of Mirrors), Alamgiri Gate, and Naulakha Pavilion"
       ]
+    },
+    {
+        "id": "swat-valley",
+        "name":"Swat Valley",
+        "lat":35.2220,
+        "lng":72.4258,
+        "region": "KPK",
+        "category":"Cultural Category",
+        "shortDescription": "often referred to as the Switzerland of the East due to its picturesque landscape; the valley is centered around the Swat River and is popular with tourists for its scenic views and historical sites.",
+        "description": "Nestled in the breathtaking mountains of northern Pakistan, Swat Valley is a paradise for nature lovers and adventure seekers alike. Known as the Switzerland of the East, it boasts lush green valleys, snow-capped peaks, and crystal-clear rivers. Tourists can explore the historic Buddhist sites of the Gandhara civilization, hike through scenic trails in Malam Jabba and Kalam, or enjoy thrilling activities like skiing and river rafting. The valley’s rich Pashtun culture, vibrant bazaars, and warm hospitality make it a must-visit destination. Whether you're looking for relaxation or adventure, Swat Valley offers an unforgettable experience.",
+              "images": [
+        "./images/destinations/lahore/sheesh-mahal.jpg",
+        "./images/destinations/lahore/alamgiri-gate.jpg",
+        "./images/destinations/lahore/naulakha-pavilion.jpg",
+        "./images/destinations/lahore/diwan-e-khas.jpg"
+      ],
+      "thumbnail": "./images/destinations/lahore/lahore-fort-thumbnail.jpg",
+      "travelTips": [
+        "From Islamabad: Approx. 5-6 hours by road. Best route is via the Swat Motorway.",
+        "By Air: The nearest airport is in Saidu Sharif (limited flights).",
+        "Rent a 4x4 Jeep for exploring off-road areas like Kumrat, Mahodand, and Kalam Valley.",
+        "Must Try: Chapli Kabab, Trout Fish, Dum Pukht, and local dry fruits."
+      ]
+        
     }
   ]
