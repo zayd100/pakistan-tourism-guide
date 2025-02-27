@@ -1,4 +1,4 @@
-// Gallery component for tourist destinations
+
 class DestinationGallery {
     constructor(containerId) {
       this.container = document.getElementById(containerId);
@@ -6,7 +6,7 @@ class DestinationGallery {
       this.destinations = [];
       this.activeFilter = 'all';
       
-      // Bind event listeners
+
       this.filters.forEach(filter => {
         filter.addEventListener('click', this.handleFilterClick.bind(this));
       });
@@ -24,27 +24,25 @@ class DestinationGallery {
     }
     
     handleFilterClick(event) {
-      // Update active filter
+
       this.filters.forEach(f => f.classList.remove('active'));
       event.target.classList.add('active');
       
-      // Get new filter value
+    
       this.activeFilter = event.target.getAttribute('data-filter');
-      
-      // Re-render gallery with filter
+   
       this.renderGallery();
     }
     
     renderGallery() {
-      // Clear existing gallery
+  
       this.container.innerHTML = '';
       
-      // Filter destinations based on active filter
+
       const filteredDestinations = this.activeFilter === 'all' 
         ? this.destinations 
         : this.destinations.filter(dest => dest.category === this.activeFilter);
-      
-      // Create gallery cards
+
       filteredDestinations.forEach(destination => {
         const card = document.createElement('div');
         card.className = 'gallery-card';
@@ -67,25 +65,24 @@ class DestinationGallery {
         `;
         
         this.container.appendChild(card);
-        
-        // Add click event listener to view gallery button
+   
         card.querySelector('.view-gallery-btn').addEventListener('click', () => {
           this.openLightbox(destination);
         });
       });
       
-      // Show empty message if no destinations
+
       if (filteredDestinations.length === 0) {
         this.container.innerHTML = '<p class="no-results">No destinations found for this category.</p>';
       }
     }
     
     openLightbox(destination) {
-      // Create lightbox element
+
       const lightbox = document.createElement('div');
       lightbox.className = 'lightbox';
       
-      // Create lightbox content
+
       lightbox.innerHTML = `
         <div class="lightbox-content">
           <button class="lightbox-close">&times;</button>
@@ -113,11 +110,10 @@ class DestinationGallery {
         </div>
       `;
       
-      // Add lightbox to document
+
       document.body.appendChild(lightbox);
       document.body.classList.add('no-scroll');
       
-      // Initialize lightbox functionality
       this.initLightbox(lightbox);
     }
     
@@ -125,10 +121,10 @@ class DestinationGallery {
       let currentSlide = 0;
       const slides = lightbox.querySelectorAll('.lightbox-slide');
       
-      // Show first slide
+
       slides[0].classList.add('active');
       
-      // Event listeners for lightbox controls
+
       lightbox.querySelector('.lightbox-close').addEventListener('click', () => {
         document.body.removeChild(lightbox);
         document.body.classList.remove('no-scroll');
@@ -152,7 +148,7 @@ class DestinationGallery {
     }
   }
   
-  // Initialize gallery when DOM is loaded
+  // Initialize gallery
   document.addEventListener('DOMContentLoaded', () => {
     const gallery = new DestinationGallery('destination-gallery');
     gallery.init();
