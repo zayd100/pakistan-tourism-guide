@@ -62,7 +62,7 @@ class DestinationGallery {
             </div>
             <p>${destination.shortDescription}</p>
             <button class="view-gallery-btn" data-id="${destination.id}">View Gallery</button>
-            <button class="view-hotel-btn" data-id="${destination.id}">View Hotels</button>
+            
           </div>
         `;
         
