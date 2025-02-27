@@ -122,5 +122,192 @@
     <script src="js/map.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/app.js"></script>
+    <!-- Add this HTML right before the closing </body> tag -->
+<!-- Donate Modal -->
+<div id="donateModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="donate-title">Support Pakistan Tourism</h2>
+        <p class="donate-text">Your contribution helps us showcase the beauty of Pakistan to the world. Thank you for your support!</p>
+        <div class="eth-address-container" id="ethAddress">0x12..</div>
+        <button class="copy-btn" id="copyButton">
+            <i class="fas fa-copy"></i> Copy Address
+        </button>
+        <p class="copy-success" id="copySuccess">Address copied to clipboard!</p>
+    </div>
+</div>
+
+<!-- Add this CSS to your head section or to your CSS file -->
+<style>
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #666;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.donate-title {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.donate-text {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.eth-address-container {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background-color: #1b5e20;
+}
+
+.copy-btn i {
+    margin-right: 8px;
+}
+
+.copy-success {
+    color: #2e7d32;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+</style>
+
+<!-- Add this JavaScript right before the closing </body> tag -->
+<script>
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Get modal elements
+    const modal = document.getElementById('donateModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const copySuccess = document.getElementById('copySuccess');
+    const copyButton = document.getElementById('copyButton');
+    
+    // Change the donate link in the navigation to open the modal
+    const donateLinks = document.querySelectorAll('a[href="#donate"]');
+    donateLinks.forEach(link => {
+        link.setAttribute('href', '#');
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+    
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
+    
+    // Close modal when clicking outside the modal
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+    
+    // Copy button functionality
+    copyButton.addEventListener('click', function() {
+        const ethAddress = document.getElementById('ethAddress');
+        const text = ethAddress.textContent;
+        
+        // Use the modern clipboard API
+        navigator.clipboard.writeText(text).then(function() {
+            // Show success message
+            copySuccess.style.display = 'block';
+            
+            // Hide message after 2 seconds
+            setTimeout(function() {
+                copySuccess.style.display = 'none';
+            }, 2000);
+        }).catch(function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    });
+    
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        copySuccess.style.display = 'none'; // Reset copy message
+    }
+    
+    // Remove the original donate section if it exists
+    const donateSection = document.getElementById('donate');
+    if (donateSection) {
+        donateSection.style.display = 'none';
+    }
+});
+</script>
 </body>
 </html>
