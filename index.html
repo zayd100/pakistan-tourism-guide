@@ -23,17 +23,23 @@
                     <li><a href="#destinations">Destinations</a></li>
                     <li><a href="#map">Map</a></li>
                     <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#donate" id="donateLink">Donate</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-<section id="donate">
-    <h2>Support the Creator</h2>
-    <p>Donate ETH to help keep this project running:</p>
-    <p class="eth-address" id="ethAddress">0x120648d29d4447FbA14D5360de2ba3095fF7B72c</p>
-    <button onclick="copyAddress()">Copy Address</button>
-</section>
+  <div id="donateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="donate-title">Support Pakistan Tourism</h2>
+            <p class="donate-text">Your contribution helps us showcase the beauty of Pakistan to the world. Thank you for your support!</p>
+            <div class="eth-address-container" id="ethAddress">0x12..</div>
+            <button class="copy-btn" onclick="copyAddress()">
+                <i class="fas fa-copy"></i> Copy Address
+            </button>
+            <p class="copy-success" id="copySuccess">Address copied to clipboard!</p>
+        </div>
+    </div>
     <section id="home" class="hero">
         <div class="container">
             <h1>Discover the Beauty of Pakistan</h1>
