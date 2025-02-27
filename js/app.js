@@ -1,4 +1,4 @@
-// Reviews component for tourist destinations
+
 class ReviewSystem {
     constructor(containerId) {
       this.container = document.getElementById(containerId);
@@ -11,8 +11,7 @@ class ReviewSystem {
       this.reviews = [];
       this.locations = [];
       this.currentRating = 0;
-      
-      // Initialize event listeners
+
       this.initEventListeners();
     }
     
@@ -38,16 +37,16 @@ class ReviewSystem {
         this.reviews = await response.json();
       } catch (error) {
         console.error('Error loading reviews:', error);
-        // If can't load reviews, initialize with empty array
+  
         this.reviews = [];
       }
     }
     
     populateLocationSelect() {
-      // Clear existing options
+
       this.locationSelect.innerHTML = '<option value="">Select a destination</option>';
       
-      // Add options for each location
+
       this.locations.forEach(location => {
         const option = document.createElement('option');
         option.value = location.id;
@@ -57,7 +56,7 @@ class ReviewSystem {
     }
     
     initEventListeners() {
-      // Rating stars
+
       this.ratingStars.forEach((star, index) => {
         star.addEventListener('click', () => {
           this.setRating(index + 1);
@@ -72,13 +71,12 @@ class ReviewSystem {
         });
       });
       
-      // Review form submission
+
       this.reviewForm.addEventListener('submit', (e) => {
         e.preventDefault();
         this.submitReview();
       });
-      
-      // Sort select
+
       this.sortSelect.addEventListener('change', () => {
         this.renderReviews();
       });
@@ -109,10 +107,10 @@ class ReviewSystem {
         return;
       }
       
-      // Get location name from ID
+
       const location = this.locations.find(loc => loc.id === locationId);
       
-      // Create new review
+
       const newReview = {
         id: Date.now().toString(),
         locationId,
@@ -123,28 +121,28 @@ class ReviewSystem {
         date: new Date().toISOString().split('T')[0]
       };
       
-      // Add to reviews array
+
       this.reviews.push(newReview);
       
-      // Save to local storage (in a real app, would send to server)
+ 
       localStorage.setItem('pakistanTourismReviews', JSON.stringify(this.reviews));
       
-      // Reset form
+   
       this.reviewForm.reset();
       this.setRating(0);
       
-      // Re-render reviews
+   
       this.renderReviews();
       
-      // Show success message
+
       alert('Thank you for your review!');
     }
     
     renderReviews() {
-      // Clear existing reviews
+   
       this.reviewsList.innerHTML = '';
       
-      // Sort reviews based on selected option
+      
       const sortBy = this.sortSelect.value;
       let sortedReviews = [...this.reviews];
       
@@ -162,8 +160,7 @@ class ReviewSystem {
           sortedReviews.sort((a, b) => a.rating - b.rating);
           break;
       }
-      
-      // Create review cards
+
       sortedReviews.forEach(review => {
         const reviewCard = document.createElement('div');
         reviewCard.className = 'review-card';
@@ -185,7 +182,7 @@ class ReviewSystem {
         this.reviewsList.appendChild(reviewCard);
       });
       
-      // Show message if no reviews
+
       if (sortedReviews.length === 0) {
         this.reviewsList.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to leave a review!</p>';
       }
