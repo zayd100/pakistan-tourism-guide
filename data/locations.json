@@ -25,8 +25,8 @@
     {
       "id": "skardu",
       "name": "Skardu",
-      "lat": 35.2955,
-      "lng": 75.6295,
+      "lat": 35.2971,
+      "lng": 75.6337,
       "region": "Gilgit-Baltistan",
       "category": "mountains",
       "shortDescription": "Gateway to the mighty Karakoram Range and home to stunning landscapes.",
@@ -48,8 +48,8 @@
     {
       "id": "murree",
       "name": "Murree",
-      "lat": 33.9085,
-      "lng": 73.3945,
+      "lat": 33.9072,
+      "lng": 73.3903,
       "region": "Punjab",
       "category": "hill-stations",
       "shortDescription": "A popular hill station and summer resort town in the Galyat region.",
@@ -118,8 +118,8 @@
     {
         "id": "deosai-national-park",
         "name":"Deosai National Park",
-        "lat":34.58,
-        "lng":75.24,
+        "lat":34.9971,
+        "lng":75.3008,
         "region": "Gilgit Baltistan",
         "category":"Natural Wonder",
         "shortDescription": "an alpine plateau of exceptional beauty and ecological value located in the western massif of the Himalayas, east of Nanga Parbat Peak and in close proximity to the Central Karakoram Range",
