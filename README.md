@@ -6,3 +6,4 @@ add thumbnails.
 add category Traveler's Safety
 use unsplash for the gallery
 not yet implemented
+update more.
