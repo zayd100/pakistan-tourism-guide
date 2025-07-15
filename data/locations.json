@@ -78,12 +78,12 @@
       "shortDescription": "A historic citadel located in the city of Lahore, a UNESCO World Heritage Site.",
       "description": "The Lahore Fort (Shahi Qila) is a citadel in the city of Lahore, Punjab, Pakistan. It is located in the northwestern corner of the Walled City of Lahore. The trapezoidal composition is spread over 20 hectares. The fort contains 21 notable monuments, some of which date to the era of Emperor Akbar. The Lahore Fort is notable for having been almost entirely rebuilt in the 17th century, when the Mughal Empire was at the height of its splendor and opulence.",
       "images": [
-        "./images/destinations/lahore/sheesh-mahal.jpg",
-        "./images/destinations/lahore/alamgiri-gate.jpg",
-        "./images/destinations/lahore/naulakha-pavilion.jpg",
-        "./images/destinations/lahore/diwan-e-khas.jpg"
+        "./images/destinations/lahore/lfort1.png",
+        "./images/destinations/lahore/lfort2.png",
+        "./images/destinations/lahore/lfort3.png",
+        "./images/destinations/lahore/lfort4.png"
       ],
-      "thumbnail": "./images/destinations/lahore/lahore-fort-thumbnail.jpg",
+      "thumbnail": "./images/destinations/lahore/lfort0.jpg",
       "travelTips": [
         "Best time to visit: October to March",
         "Entry fee: PKR 500 for foreigners, PKR 20 for locals",
