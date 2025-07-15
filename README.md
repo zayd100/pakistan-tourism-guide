@@ -1,7 +1,9 @@
 # Shandar Safar - Pakistan Tourism Guide
 
+![Prev](prev.png)
+
 A responsive web application showcasing Pakistan's beautiful destinations with an interactive map and image gallery.
-(Prev)[prev.png]
+
 ## Overview
 
 Shandar Safar (meaning "Beautiful Journey" in Urdu) is a tourism website I built during my early learning days to promote Pakistani destinations. The project combines my passion for travel with web development skills I was developing at the time.
